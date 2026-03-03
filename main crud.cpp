@@ -24,8 +24,17 @@ string visualizza(prodotto ele[], int dim){
 	}
 	return s;
 }
-int ricerca(prodotto pp,int dim){
-	if()
+void ricerca(prodotto p, prodotto x[], int dim){
+	for(int i=0;i<dim;i++){
+		if(p.nome==x[i].nome && p.categoria==x[i].categoria && p.prezzo==x[i].prezzo ){
+			cout<<"posizione trovata: "<< i << endl;
+			break;
+		}
+		else{
+			cout<< -1<<endl;
+		}
+	}
+
 }
 
 int main(){
@@ -63,7 +72,7 @@ switch(scelta){
 		
 	    cout<<visualizza(elenco,n);
 		break;	
-	case 3: cout<<    <<endl;
+	case 3: cout<< ricerca(p,elenco,n)   <<endl;
 	
 	break;	
 	
